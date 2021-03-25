@@ -13,10 +13,12 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  mockito: ^5.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner:
 
 flutter:
   uses-material-design: true

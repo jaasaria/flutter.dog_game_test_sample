@@ -3,6 +3,8 @@ import 'package:testproject/pet_abstract.dart';
 import 'dog_model.dart';
 
 class DogViewModel implements Pet {
+  int hungryPoint = 5; //above 5 is hungry, and lower than 5 is okay / full
+
   @override
   Future<void> eat(Dog dog, String? food) async {
     // await Future.delayed(Duration(seconds: 1));
@@ -37,7 +39,7 @@ class DogViewModel implements Pet {
 
   @override
   bool isHungry(int hungryLevel) {
-    if (hungryLevel > 5) {
+    if (hungryLevel > hungryPoint) {
       return true;
     } else {
       return false;
@@ -45,7 +47,7 @@ class DogViewModel implements Pet {
   }
 
   reset(Dog dog) {
-    dog.hungyLevel = 5;
+    dog.hungyLevel = hungryPoint;
     dog.affectionLevel = 0;
   }
 

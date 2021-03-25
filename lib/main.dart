@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   eat() {
     setState(() {
-      dogViewModel.eat(myDog, 'aa');
+      dogViewModel.eat(myDog, 'fish');
     });
   }
 
